@@ -6,6 +6,8 @@
   6 sleep 5 #sleep 2
   7 done
   8 cat /proc/cpuinfo > proc.txt
-  9 grep "NAME="/etc/os-release >> proc.txt
- 10 grep "NAME="/etc/os-release | awk -F'=' '{print $2}' >> proc.txt
+  9 grep "NAME=" /etc/os-release >> proc.txt
+ 10 grep "NAME=" /etc/os-release | awk -F= '{print $2}' >> proc.txt
  11 touch {50..100}.txt
+
+ 
