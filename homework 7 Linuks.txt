@@ -1,0 +1,33 @@
+ 1 #!/bin/bash
+  2 echo "  "
+  3 echo "Hello Student!"
+  4 echo "  "
+  5 echo "Please, enter your name:"
+  6 read name
+  7 echo "  "
+  8 echo "Welcome to terminal $name"
+  9 echo "  "
+ 10 mkdir -p /tmp/test
+ 11 touch /tmp/test/ketdate.txt
+ 12 date
+ 13 echo "  "
+ 14 date +%T >> /tmp/test/ketdate.txt
+ 15 echo "Saving data:"
+ 16 echo "  "
+ 17 for i in {1..10}
+ 18 do
+ 19 sleep 0.5
+ 20 echo $i
+ 21 done
+ 22 echo "  "
+ 23 echo "Data saved. Continue work."
+ 24 echo "  "
+ 25 df -h >> /tmp/test/ketdate.txt
+ 26 cp /tmp/test/romansdate.txt /opt/newketdate.txt
+ 27 for j in {5..1}
+ 28 do
+ 29 sleep 1
+ 30 echo $j
+ 31 done
+ 32 echo " "
+ 33 echo "Well done Boss"
