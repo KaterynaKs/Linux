@@ -1,0 +1,14 @@
+ 1 #!/bin/bash
+  2 current_date=$(date +"%d_%m_%Y")
+  3 echo "$current_date"
+  4 for i in {1..10}
+  5 do
+  6 file_number=$(printf "%d" "$i")
+  7 file_name="${file_number}_${current_date}"
+  8 touch "$file_name"
+  9 echo "Создан файл: $file_name"
+ 10 done
+
+
+crontab -e
+#15 * * * * /opt/130824_morning/Kateryna_Vasylenko/task_KATERYNA.sh
